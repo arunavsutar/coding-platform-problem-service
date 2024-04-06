@@ -1,3 +1,5 @@
+const { StatusCodes } = require('http-status-codes');
+
 class BaseError extends Error {
     constructor(name, statusCode, description, details) {
         super(description);
