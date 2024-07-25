@@ -27,6 +27,24 @@ const problemSchema = new mongoose.Schema({
             }
         }
     ],
+    codeStubs: [
+        {
+            language: {
+                type: String,
+                enum: ['JAVA', 'CPP', 'PYTHON'],
+                required: true
+            },
+            startSnippet: {
+                type: String,
+            },
+            userSnippet: {
+                type: String
+            },
+            endSnippet: {
+                type: String,
+            }
+        }
+    ],
     editorial: {
         type: String,
         //required: [true,"Editorial can not be Empty."]
